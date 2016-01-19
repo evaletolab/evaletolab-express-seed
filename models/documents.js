@@ -106,9 +106,9 @@ Document.statics.findByCriteria = function(criteria, callback){
   //
   // fondByType
   if(criteria.type){
-    if(!EnumDocumentType(criteria.type)){
-      return callback("Le type du document n'est pas valable: "+criteria.type);
-    }
+    // if(!EnumDocumentType(criteria.type)){
+    //   return callback("Le type du document n'est pas valable: "+criteria.type);
+    // }
     query=query.where({type:criteria.type});
   }
 

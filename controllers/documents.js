@@ -43,7 +43,7 @@ var queryFilterByUser=function (q,req) {
     q.available=true;
     q.published=true;
   }
-  else if(req.isAdmin()){
+  else if(req.user.isAdmin()){
     q.available=true;
   }else{
     q.available=true;
