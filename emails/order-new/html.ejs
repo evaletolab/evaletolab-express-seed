@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;">
+<head>
+<meta name="viewport" content="width=device-width" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Billing e.g. invoices and receipts</title>
+
+
+<style type="text/css">
+img {
+max-width: 100%;
+}
+body {
+-webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6;
+}
+body {
+background-color: #fff;
+}
+@media only screen and (max-width: 640px) {
+  h1 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h2 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h3 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h4 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h1 {
+    font-size: 22px !important;
+  }
+  h2 {
+    font-size: 18px !important;
+  }
+  h3 {
+    font-size: 16px !important;
+  }
+  .container {
+    width: 100% !important;
+  }
+  .content {
+    padding: 10px !important;
+  }
+  .content-wrap {
+    padding: 10px !important;
+  }
+  .invoice {
+    width: 100% !important;
+  }
+}
+</style>
+</head>
+
+<body style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6; background: #fff; margin: 0; padding: 0;">
+
+<%if (develMode) {%>
+<div><strong style="color:green">TEST -- TEST -- TEST</strong><br/></div>
+<% } %>Bonjour <%= order.customer.name.givenName %>,<br/>
+<br/>
+Nous vous remercions pour votre commande du <u><%= created %></u>. <br/>
+Vous trouverez ci-dessous le détail de votre commande<br/>
+<pre style="font-size:10px">
+*<% for(var i=0; i<order.items.length; i++) {%>
+* <%= order.items[i].quantity %>x <%- order.items[i].title %> (<%- order.items[i].part %>) <%= order.items[i].finalprice.toFixed(2) %> CHF <%if (order.items[i].variant&&order.items[i].variant.title) {%>
+*    option: <%= order.items[i].variant.title %><% } %><% } %>
+* ------------------
+* Sous total  <%= subTotal %> CHF
+* Frais de livraison <%= shippingFees %> CHF
+* Frais de paiement <%= paymentFees %> CHF
+* ------------------
+* Montant total provisoire <%= totalWithFees %> CHF
+*
+</pre>
+<h4>Récapitulatif</h4>
+Numéro de commande: <%= order.oid %><br/>
+Méthode de paiement: <%= order.payment.issuer %><br/>
+Montant total provisoire: <%= totalWithFees %> CHF<br/>
+Date de livraison: <b>Le <%= shippingWhen %> </b><br/>
+Adresse de livraison: <br/>
+# <%- order.shipping.name %> <br/>
+# <%- order.shipping.streetAdress %> <br/>
+# <%- order.shipping.postalCode %>, <%- order.shipping.region %> <br/>
+
+<h4>Paiement et montant</h4>
+Vous recevrez une facture détaillée par e-mail avant la livraison.<br/>
+Le total de la commande peut être ajusté dans le cas où vous avez commandé des produits à poids variables dont le prix est connu le jour de la livraison. 
+Aussi, si un produit devait être en rupture de stock, il sera déduit de la facture finale.<br/>
+<br/>
+Pour toute question, veuillez répondre à ce mail.<br/>
+Avec nos meilleurs messages,<br/>
+<pre style="font-size:10px">
+ | |/ /         (_) |                
+ | ' / __ _ _ __ _| |__   ___  _   _ 
+ |  < / _` | '__| | '_ \ / _ \| | | |
+ | . \ (_| | |  | | |_) | (_) | |_| |
+ |_|\_\__,_|_|  |_|_.__/ \___/ \__,_|
+    
+</pre>
+----<br/>
+Toutes vos commandes <%= origin %>/account/orders <br/>
+
+</body>
+</html>

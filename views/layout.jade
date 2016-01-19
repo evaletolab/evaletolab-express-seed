@@ -1,0 +1,97 @@
+!!! 5
+html
+  head
+    title Karibou API
+    meta(name='robots', content='noindex,nofollow')
+    link(href="/css/bootstrap-white.min.css", rel="stylesheet")
+    link(href="/css/bootstrap-responsive.min.css", rel="stylesheet")
+    link(href="/css/bootswatch.css", rel="stylesheet")
+    script(src="js/jquery-1.9.0.min.js")
+    script(src="js/bootstrap.min.js")
+
+    //    
+      script(src='http://static.ak.fbcdn.net/connect/en_US/core.js')
+    script.
+      $(function(){
+        var a = $('a.menu[href="' + window.location.pathname + '"]');
+        a.parent().addClass('active');
+      });
+  body
+  
+  body(data-spy="scroll", data-target=".bs-docs-sidebar")
+
+    // Navbar
+    // ================================================== 
+    div.navbar.navbar-inverse.navbar-fixed-top
+      div.navbar-inner
+        div.container
+          button( type="button", class="btn btn-navbar", data-toggle="collapse", data-target=".nav-collapse")
+            span.icon-bar o
+            span.icon-bar
+            span.icon-bar
+          a(class="brand", href="https://github.com/evaletolab/karibou-api") Karibou
+          div.nav-collapse.collapse
+            ul.nav
+              li: a.menu(href="/") Home
+              li: a.menu(href="/v1") API V1
+              li: a.menu(href="/about") About
+  
+          ul(class="nav pull-right", id="main-menu-right")
+            block content
+
+    #main.container
+      h2 Karibou API, the open source Marketplace
+      p
+      |Karibou is an open-source projects aim to help the creation of a online community marketplace. 
+      |The Karibou-api is the backend - for developpers - and is implemented as JSON and follow the rules of <a http="http://en.wikipedia.org/wiki/Representational_state_transfer">REST</a>. 
+      - if (user)
+        pre: =JSON.stringify(user)
+      table.table(style="font-family: sans-serif;")
+        thead: tr 
+          th: path
+          th: method
+          th: secure
+          th: params
+        tbody
+        tr(colspan=4)
+          td: b Selections
+        each route in filter(api.get)
+            tr(style="background-color:#eee")
+              td: =route.path
+              td: =route.method
+              td: -
+              td: =route.params
+        tr(colspan=4)
+          td: b Creations
+        each route in filter(api.post)
+            tr
+              td: =route.path
+              td: =route.method
+              - if(route.callbacks.length)
+                td: b secure
+              - else
+                td: -
+              td: =route.params
+        tr(colspan=4)
+          td: b Deletions
+        each route in filter(api.delete)
+            tr(style="background-color:#eee")
+              td: =route.path
+              td: =route.method
+              - if(route.callbacks[0])
+                td: b secure
+              - else
+                td: -
+              td: =route.params
+        tr(colspan=4)
+          td: b Updates
+        each route in filter(api.put)
+            tr
+              td: =route.path
+              td: =route.method
+              - if(route.callbacks[0])
+                td: b secure
+              - else
+                td: -
+              td: =route.params
+

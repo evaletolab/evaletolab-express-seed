@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 12px; margin: 0; padding: 0;">
+<head>
+<meta name="viewport" content="width=device-width" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+<style type="text/css">
+img {
+max-width: 100%;
+}
+body {
+-webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6;
+}
+body {
+background-color: #fff;
+}
+@media only screen and (max-width: 640px) {
+  h1 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h2 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h3 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h4 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h1 {
+    font-size: 22px !important;
+  }
+  h2 {
+    font-size: 18px !important;
+  }
+  h3 {
+    font-size: 16px !important;
+  }
+  .container {
+    width: 100% !important;
+  }
+  .content {
+    padding: 10px !important;
+  }
+  .content-wrap {
+    padding: 10px !important;
+  }
+  .invoice {
+    width: 100% !important;
+  }
+}
+</style>
+</head>
+
+<body style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6; background: #fff; margin: 0; padding: 0;">
+
+<!-- BEGIN -->
+
+<%if (develMode) {%>
+<div><strong style="color:green">TEST -- TEST -- TEST</strong><br/></div>
+<% } %>Bonjour <%= shop.owner.name.givenName %>,<br/>
+
+Vous trouverez ci-dessous les commandes à préparer pour le <u><%= shippingWhen %></u>. La collecte s'effectuera entre 10h30 et 14h00 au plus tard.<br/>
+<br/>
+<table style="border:0px">
+<thead>
+  <tr style="background-color:#eee">
+    <th style="width:50px;padding:0 8px;">No de Sac<b>*</b></th>
+    <th style="padding:0 8px;">Client</th>
+    <th style="padding:0 8px;text-align:right">Qté</th>
+    <th style="padding:0 8px;text-align:left">Produit (portion)</th>
+    <th style="padding:0 8px;">Prix</th>
+    <th style="padding:0 8px;">Total</th>
+  </tr>
+</thead>
+<tbody>
+	<% for(var i=0; i<items.length; i++) {%>
+	<tr>
+		<td style="text-align:center"><b><%= items[i].rank %></b> </td>
+		<td><a href="mailto:<%= items[i].email %>"><%= items[i].name.familyName %></a> </td>
+		<td style="text-align:right"><%= items[i].quantity %>x </td>
+		<td><%= items[i].title %> (<%= items[i].part %>) <%if (items[i].variant&&items[i].variant.title) {%>
+      <br/>option: <%= items[i].variant.title %><% } %>
+    </td>
+		<td><%= items[i].price.toFixed(2) %> </td>
+		<td><%= items[i].finalprice.toFixed(2) %> </td>
+	</tr>
+	<% } %>
+</tbody>
+</table>
+<p style="color:#aaa"><b>(*)</b> inscrire le numéro de sac sur l'emballage</p>
+Vous pouvez suivre les commandes ici <%= origin %>/admin/orders <br/>
+Avec mes meilleurs messages,<br/>
+
+Delphine
+<pre style="font-size:10px">
+ | |/ /         (_) |                
+ | ' / __ _ _ __ _| |__   ___  _   _ 
+ |  < / _` | '__| | '_ \ / _ \| | | |
+ | . \ (_| | |  | | |_) | (_) | |_| |
+ |_|\_\__,_|_|  |_|_.__/ \___/ \__,_|
+</pre>    
+tel : +4179.377.21.13
+
+</body>
+</html>

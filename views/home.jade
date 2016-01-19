@@ -1,0 +1,12 @@
+extends layout
+block content
+  - if (!user)
+    li: a(href='/login', rel="tooltip", title="Login") Login <i class="icon-user"></i>
+    li: a(href='/register', rel="tooltip", title="Login") Register <i class="icon-user"></i>
+    li: a(href='/auth/twitter', rel="tooltip", title="Login") Login with Twitter <i class="icon-user"></i>
+  - else
+    li: a: =user.id+'@'+user.provider
+    
+    
+    li: a(href='/logout') Logout
+  
