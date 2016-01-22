@@ -27,7 +27,7 @@ Running
 ## API
 Current API version is v1. You need to prepend `v1/` to app requests except auth.
 
-* backend, http://api.cms.evaletolab.ch/v1 
+* backend, http://api.cms.evaletolab.ch/v1/config 
 
 ### Auth
 All requests that change state (`POST`, `PUT`, `DELETE`) require authentication.
