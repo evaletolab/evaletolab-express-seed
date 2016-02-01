@@ -130,9 +130,13 @@ exports.create=function (req, res) {
 exports.update=function (req, res) {
   //
   // check && validate input field
+  var lang=req.session.lang||config.shared.i18n.defaultLocale;
   try{
     validate.check(req.params.slug, "Le format SLUG du document n'est pas valide").len(3, 104).isSlug();    
     validate.document(req.body);
+    if(!lang){
+      throw new Error('default locale is not selected');
+    }
   }catch(err){
     return res.status(400).send( err.message);
   }  
@@ -155,6 +159,7 @@ exports.update=function (req, res) {
       return res.status(400).send('Ooops, unknow doc '+req.params.slug);    
     }
 
+
     // if not admin  
     if(!req.user.isAdmin()){
       req.body.signature=doc.signature;
@@ -165,14 +170,8 @@ exports.update=function (req, res) {
 
     // 
     // slug this doc TODO the slug change the final url && url can be bookmarked!! WE SHOULD SAVE SLUG VERSIONS
-    if(req.body.title&&doc.title.fr!==req.body.title.fr){
-      doc.slug.push(req.body.title.fr.slug());
-    }    
-    if(req.body.title&&doc.title.en!==req.body.title.en){
-      doc.slug.push(req.body.title.en.slug());
-    }    
-    if(req.body.title&&doc.title.de!==req.body.title.de){
-      doc.slug.push(req.body.title.de.slug());
+    if(req.body.title&&doc.title[lang]!==req.body.title[lang]){
+      doc.slug.push(req.body.title[lang].slug());
     }    
 
 

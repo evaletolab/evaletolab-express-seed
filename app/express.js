@@ -204,13 +204,12 @@ var tokenSession=function (req, res, next) {
 
         //
         // update locale in session
-        if(req.query.lang && config.i18n.locales.indexOf(req.query.lang)!==-1){
+        if(req.query.lang && config.shared.i18n && config.shared.i18n.locales.indexOf(req.query.lang)!==-1){
           req.session.lang=req.query.lang;
         }
-
+       
         if(req.session.lang){
-          i18n.setLocale(req.session.lang);
-          console.log("default locales",req.session.lang);
+          req.i18n.setLocale(req.session.lang);
         }
         next();
     });

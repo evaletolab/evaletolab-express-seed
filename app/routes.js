@@ -24,6 +24,11 @@ module.exports = function(app, config, passport) {
     }
   }
 
+  function nocached(req, res, next) {
+    res.setHeader('Cache-Control', 'public, max-age=0');
+    return next();
+  }
+
 
   function cached(req, res, next) {
     res.setHeader('Cache-Control', 'public, max-age=120');
@@ -100,7 +105,7 @@ module.exports = function(app, config, passport) {
 
   //
   // system
-  app.get ('/v1/config', cached, api.config);
+  app.get ('/v1/config', nocached, api.config);
   app.post('/v1/config', auth.ensureAdmin, api.saveConfig);
   app.post('/v1/trace/:key', api.trace);
   app.post('/v1/comment', api.email);

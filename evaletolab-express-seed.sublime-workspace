@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"con",
+				"console"
+			],
+			[
+				"do",
+				"document"
+			],
+			[
+				"sh",
+				"shared"
+			],
+			[
+				"title",
+				"fixture-title"
+			],
+			[
+				"typ",
+				"types"
+			],
+			[
+				"eva",
+				"evaletolab-seed-devel"
+			],
+			[
+				"c",
+				"console"
+			],
+			[
+				"users",
+				"users"
+			],
+			[
+				"ro",
+				"rootPath"
+			],
+			[
+				"li",
+				"like_slug"
+			],
+			[
+				"evale",
+				"evaletolab"
+			],
+			[
 				"lo",
 				"log"
 			],
@@ -14,10 +58,6 @@
 			[
 				"send",
 				"sendmail"
-			],
-			[
-				"con",
-				"config"
 			],
 			[
 				"pr",
@@ -156,10 +196,6 @@
 				"referrers"
 			],
 			[
-				"do",
-				"documents"
-			],
-			[
 				"use",
 				"user"
 			],
@@ -174,10 +210,6 @@
 			[
 				"d",
 				"documents"
-			],
-			[
-				"ro",
-				"routeParams"
 			],
 			[
 				"rout",
@@ -294,10 +326,6 @@
 			[
 				"ord",
 				"orders"
-			],
-			[
-				"sh",
-				"shopname"
 			],
 			[
 				"sho",
@@ -486,39 +514,307 @@
 			[
 				"inf",
 				"indexOf"
-			],
-			[
-				"de",
-				"defaultClazz"
-			],
-			[
-				"upload",
-				"uploadcare"
-			],
-			[
-				"fi",
-				"fileInfo"
-			],
-			[
-				"err",
-				"error_net"
-			],
-			[
-				"v",
-				"vertical-align"
-			],
-			[
-				"ti",
-				"title"
-			],
-			[
-				"tex",
-				"text-decoration"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "app/routes.js",
+			"settings":
+			{
+				"buffer_size": 3768,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models/categories.js",
+			"settings":
+			{
+				"buffer_size": 2419,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/category.js",
+			"settings":
+			{
+				"buffer_size": 3634,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/fixtures.js",
+			"settings":
+			{
+				"buffer_size": 1425,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/users.likes.js",
+			"settings":
+			{
+				"buffer_size": 1947,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/config-development.js",
+			"settings":
+			{
+				"buffer_size": 3468,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "controllers/users.js",
+			"settings":
+			{
+				"buffer_size": 7460,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models/config.js",
+			"settings":
+			{
+				"buffer_size": 2453,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "controllers/auth.js",
+			"settings":
+			{
+				"buffer_size": 6340,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "controllers/documents.js",
+			"settings":
+			{
+				"buffer_size": 6875,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "controllers/validate/validate.js",
+			"settings":
+			{
+				"buffer_size": 4751,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "controllers/home.js",
+			"settings":
+			{
+				"buffer_size": 1031,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models/documents.js",
+			"settings":
+			{
+				"buffer_size": 3163,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models/users.js",
+			"settings":
+			{
+				"buffer_size": 15188,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/fixtures/dbtools.js",
+			"settings":
+			{
+				"buffer_size": 1244,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/api.documents.js",
+			"settings":
+			{
+				"buffer_size": 5697,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/fixtures/Documents.js",
+			"settings":
+			{
+				"buffer_size": 631,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/api.users.addresses.js",
+			"settings":
+			{
+				"buffer_size": 4561,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/passport.js",
+			"settings":
+			{
+				"buffer_size": 6562,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/api.users.create.js",
+			"settings":
+			{
+				"buffer_size": 4584,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/api.users.js",
+			"settings":
+			{
+				"buffer_size": 6288,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/api.users.likes.js",
+			"settings":
+			{
+				"buffer_size": 2757,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/api.users.status.js",
+			"settings":
+			{
+				"buffer_size": 2235,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/bus.routes.js",
+			"settings":
+			{
+				"buffer_size": 1367,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/api.users.update.secure.admin.js",
+			"settings":
+			{
+				"buffer_size": 1895,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/api.users.update.secure.js",
+			"settings":
+			{
+				"buffer_size": 3810,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/db.maintain.js",
+			"settings":
+			{
+				"buffer_size": 1574,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/system.js",
+			"settings":
+			{
+				"buffer_size": 7373,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/express.js",
+			"settings":
+			{
+				"buffer_size": 7139,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app.js",
+			"settings":
+			{
+				"buffer_size": 3436,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "# evaletolab-express-seed\nThis is a backend part of your futur application.\n\n[![Build Status](https://travis-ci.org/evaletolab/evaletolab-express-seed.svg?branch=master)](https://travis-ci.org/evaletolab/evaletolab-express-seed)\n\n## Getting started\nThis is a backend part of your futur application.\n\n    $ git clone https://github.com/evaletolab/evaletolab-express-seed.git\n    $ cd evaletolab-express-seed\n    $ npm install\n    $ optional edit config-devel|test.js\n    $ mongod\n    \nTesting\n\n    $ sudo npm -g install mocha\n    $ NODE_ENV=test ./node_modules/.bin/mocha\n    $ (or) make test\n\nRunning    \n\n    $ node app\n\n\n## API\nCurrent API version is v1. You need to prepend `v1/` to app requests except auth.\n\n* backend, http://api.karibou.evaletolab.ch/v1 \n\n### Auth\nAll requests that change state (`POST`, `PUT`, `DELETE`) require authentication.\n\n#### Get user data\n```\n  #STATE  #ROUTE                                 #SECURITY                 #API\n  app.get('/v1/users/me'                        , auth.ensureAuthenticated, users.me);\n  app.get('/v1/users'                           , auth.ensureAdmin        , users.list);\n  app.post('/v1/users/:id'                      , users.ensureMe          , users.update);\n  app.post('/v1/users/:id/like/:slug'           , users.ensureMe          , users.like);\n  app.post('/v1/users/:id/unlike/:slug'         , users.ensureMe          , users.unlike);\n  app.post('/v1/users/:id/status'               , auth.ensureAdmin        , users.status);\n  app.post('/v1/users/:id/password'             , users.ensureMe          , users.password);\n  app.post('/v1/recover/:token/:email/password'                           , users.recover);\n  \n```\n**Example:** http://api.karibou.evaletolab.ch/v1/users/me\n\n\n\n## Copyright & dual License \n<!--\n4. You may not use the work for some commercial purposes — unless you get the Karibou's permission. \n * You can sell copies of the software, \n * **YOU CAN NOT USE THE SOFTWARE TO BUILD A ONLINE GROCERY STORE WITHOUT THE KARIBOU PERMISSION.**\n-->\n\n* Copyright (c) 2015 Karibou (http://karibou.ch/)\n* Copyright (c) 2012 Olivier Evalet (http://evaletolab.ch/)\n\nKaribou is distributed under a dual license: an open source license, and a commercial license. The open source license under which Karibou API is distributed is the AGPL V3 to protect the long term interests of the community – you are free to use it with no restrictions but if you change the server code, then those code changes must be contributed back. **it means,**\n\n1. If you run a modified program on a server and let other users contact him, your server should also allow them to download the source code for the version amended in operation. \n2. The download link must be visible and accessible from the footer website, \n3. The download link should also display the copyright holder  : developped with :green_heart: by Karibou.ch\n\nFor anyone who wants to develop and use but does not want to release the source code for their application, Karibou is able to provide a commercial licence. You have to contact [Karibou](license@karibou.ch) to get a commercial license.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\n**The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.**\n\n\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n\n* more reading http://www.gnu.org/licenses/gpl-violation.fr.html http://www.gnu.org/licenses/why-affero-gpl.fr.html\n",
+			"file": "README.md",
+			"file_size": 4263,
+			"file_write_time": 130969865147607716,
+			"settings":
+			{
+				"buffer_size": 4260,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 1662,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "\nvar path = require('path');\nvar PATH = function(p) {\n  return path.resolve(__dirname, p);\n};\n\nmodule.exports = {\n  dropdb:true,\n  mail:{\n    from:'seed@karibou.evaletolab.ch',\n    to:['delphine.cluzel@gmail.com','evaleto@gmail.com'],\n    info:'seed@karibou.ch',\n    validate:{time:24,short:1},\n    origin:'http://karibou.evaletolab.ch',\n    default:'mandril',\n    mandril:{\n      host:'smtp.mandrillapp.com',\n      port:587,\n      user:'',\n      code:''\n    }\n  },\n\n  mailing:{\n    'main':{\n      title:\"\",\n      mailchimp:'0f92954013'\n    }\n  },\n\n  admin:{\n    handle:'secret',\n    emails:['evaleto@gmail.com'],\n    secret: '1234',\n    webhook: {release:'devel',secret:'qawsedr'},\n    padding:'0d0b0e0d'\n  },\n\n  cors:{\n    allowedDomains:['http://lo.cal:3000'],\n    credentials:true,\n    age:3600\n  },\n\n  express: {\n    port: 4000,\n    views: '/views',\n    'view engine': 'jade',\n    mongoSession:false\n  },\n\n /**\n  * Time to validate an email 2 ms\n  */\n  validate:{\n    email:0.002\n  },\n\n\n  // TODO load by env\n  mongo:{\n    name:'mongodb://localhost/evaletolab-seed-test',\n    ensureIndex:true\n  },\n\n	nodetime:{\n	},\n\n  disqus:{\n    pub:'123',\n    secret:'456'\n  },\n\n\n	auth:{\n    fb: {\n        appId: '111565172259433'\n      , appSecret: '85f7e0a0cc804886180b887c1f04a3c1'\n    }\n    , twit: {\n          consumerKey: 'PzDBUUZoU5hVtigzAz73w'\n        , consumerSecret: 'AvLzgxbZoJHMvV9RSCmvHGDL1ona0Zm9pOsw4FNGno'\n  		  , cb: \"http://localhost:4000/auth/twitter/callback\"\n      }\n    , github: {\n          appId: '11932f2b6d05d2a5fa18'\n        , appSecret: '2603d1bc663b74d6732500c1e9ad05b0f4013593'\n      }\n    , google: {\n          clientId: '224794776836-cp3a2v0elt955h9uqhgmskplhg85ljjm.apps.googleusercontent.com'\n        , clientSecret: 'rxGFo1mBG_H3DX2ifDFawiMZ'\n      }\n	},\n\n\n	// TODO auto load middleware?\n  middleware: {\n    responseTime: true,\n\n    favicon: PATH('static/favicon.ico'),\n\n    logger: 'dev',\n\n    bodyParser: {},\n\n    methodOverride: '_method',\n\n    cookieParser: 'ogXMXgRbnInguKYYx9Pm',\n\n    session: {\n      /*\n       *  key         cookie name defaulting to connect.sid\n       *  secret      session cookie is signed with this secret\n       *              to prevent tampering\n       *  cookie      session cookie settings, defaulting to\n       *              { path: '/', httpOnly: true, maxAge: null }\n       *  proxy       trust the reverse proxy when setting secure cookies\n       *              (via \"x-forwarded-proto\")\n      */\n\n  		secret:'cp3a2v0elt955h9uqhgmskplhg85ljjm',\n      key: ['sid'],\n      cookie: {\n        path: '/',\n        httpOnly: true,\n        maxAge: 1000 * 60 * 60 * 24 * 60 // = 60 days (in miliseconds)\n      }\n    },\n\n    csrf: {}\n	}\n};\n",
+			"file": "config/config-test.js",
+			"file_size": 2812,
+			"file_write_time": 130969932350923744,
+			"settings":
+			{
+				"buffer_size": 2696,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/config-shared.js",
+			"settings":
+			{
+				"buffer_size": 1233,
+				"line_ending": "Unix",
+				"name": "module.exports = {"
+			}
+		},
+		{
+			"file": "app/config.js",
+			"settings":
+			{
+				"buffer_size": 789,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "docs/changelog.md",
+			"settings":
+			{
+				"buffer_size": 574,
+				"line_ending": "Unix",
+				"name": "# Changes"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -569,10 +865,29 @@
 	},
 	"expanded_folders":
 	[
-		"/home/evaleto/nodejs/git/evaletolab-express-seed"
+		"/home/evaleto/nodejs/git/evaletolab-express-seed",
+		"/home/evaleto/nodejs/git/evaletolab-express-seed/app",
+		"/home/evaleto/nodejs/git/evaletolab-express-seed/config",
+		"/home/evaleto/nodejs/git/evaletolab-express-seed/controllers",
+		"/home/evaleto/nodejs/git/evaletolab-express-seed/controllers/validate",
+		"/home/evaleto/nodejs/git/evaletolab-express-seed/docs",
+		"/home/evaleto/nodejs/git/evaletolab-express-seed/models",
+		"/home/evaleto/nodejs/git/evaletolab-express-seed/public",
+		"/home/evaleto/nodejs/git/evaletolab-express-seed/test",
+		"/home/evaleto/nodejs/git/evaletolab-express-seed/test/fixtures"
 	],
 	"file_history":
 	[
+		"/home/evaleto/nodejs/git/evaletolab-express-seed/controllers/validate/validate.js",
+		"/home/evaleto/nodejs/git/evaletolab-express-seed/controllers/api.js",
+		"/home/evaleto/nodejs/git/evaletolab-express-seed/test/api.category.js",
+		"/home/evaleto/nodejs/git/evaletolab-express-seed/test/api.category.find.js",
+		"/home/evaleto/nodejs/git/evaletolab-express-seed/test/category.js",
+		"/home/evaleto/nodejs/git/evaletolab-express-seed/models/categories.js",
+		"/home/evaleto/nodejs/git/evaletolab-express-seed/test/users.likes.js",
+		"/home/evaleto/nodejs/git/evaletolab-express-seed/controllers/users.js",
+		"/home/evaleto/nodejs/git/evaletolab-express-seed/models/users.js",
+		"/home/evaleto/nodejs/git/evaletolab-express-seed/test/fixtures/Orders.js",
 		"/tmp/karibou-api/config/config-shop.js",
 		"/tmp/karibou-api/node_modules/nodemailer/node_modules/nodemailer-smtp-transport/src/smtp-transport.js",
 		"/tmp/karibou-api/models/order.js",
@@ -690,21 +1005,11 @@
 		"/home/evaleto/nodejs/karibou-mockup/app.js",
 		"/home/evaleto/nodejs/karibou-mockup/app/partials/dashboard/dashboard-invoice.html",
 		"/home/evaleto/nodejs/karibou-mockup/app/partials/order/order-lists-invoice.html",
-		"/home/evaleto/nodejs/karibou-mockup/app/partials/order/order-lists-logistic.html",
-		"/home/evaleto/nodejs/karibou-mockup/app/js/app.angular-filter.js",
-		"/home/evaleto/nodejs/karibou-mockup/vendor/scripts/angular-route.js",
-		"/home/evaleto/nodejs/karibou-mockup/app/js/app.stats.js",
-		"/home/evaleto/nodejs/karibou-mockup/app/css/timeline.css",
-		"/home/evaleto/nodejs/karibou-mockup/app/css/feedback.css",
-		"/home/evaleto/nodejs/karibou-mockup/app/js/app.category.js",
-		"/home/evaleto/nodejs/karibou-mockup/app/assets/partials/order/order-lists-byshop.html",
-		"/home/evaleto/nodejs/karibou-mockup/app/assets/partials/dashboard/dashboard-shop.html",
-		"/home/evaleto/nodejs/karibou-mockup/app/css/validate-widget.css",
-		"/home/evaleto/nodejs/karibou-mockup/app/assets/partials/dashboard/dashboard-header.html"
+		"/home/evaleto/nodejs/karibou-mockup/app/partials/order/order-lists-logistic.html"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 52.0
 	},
 	"find_in_files":
 	{
@@ -721,6 +1026,22 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"EnumDocumentType",
+			"validate",
+			"config",
+			"cook",
+			"Prod",
+			"bus.",
+			"test_slug",
+			"SKU",
+			"conso",
+			"config.s",
+			"config.shared",
+			"config.shop",
+			"like",
+			"sku",
+			"Shop",
+			"paym",
 			"passport_Authenticate",
 			"informShopToOrders",
 			"$log",
@@ -832,23 +1153,7 @@
 			"c4b19c",
 			"aside>.cover-body",
 			"bucket",
-			".cover-resume.categories",
-			".cover-resume.categories .site-nav-list-item",
-			"c4b19c",
-			"cover.img-loaded",
-			"aside>.cover-body",
-			"cover.img-loaded",
-			"Gentium",
-			"lst",
-			"arr",
-			"scope.shops",
-			"shops",
-			".shops",
-			".cover ",
-			"order.",
-			"order",
-			"linear-gradient",
-			"c4b19c"
+			".cover-resume.categories"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -885,14 +1190,1093 @@
 	"groups":
 	[
 		{
+			"selected": 12,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/routes.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3768,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								948,
+								948
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "models/categories.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2419,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								658,
+								658
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "test/category.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3634,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								271,
+								271
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "test/fixtures.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1425,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1415,
+								1415
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 810.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "test/users.likes.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1947,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1261,
+								1261
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 729.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 28,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "config/config-development.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3468,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2711,
+								2711
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1053.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "controllers/users.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7460,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4554,
+								4554
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4522.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 23,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "models/config.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2453,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								835,
+								835
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 311.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "controllers/auth.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6340,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6306,
+								6306
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3444.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 27,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "controllers/documents.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6875,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1199,
+								1199
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1458.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "controllers/validate/validate.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4751,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								913,
+								913
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "controllers/home.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1031,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								561,
+								561
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 32,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "models/documents.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3163,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3163,
+								3163
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1612.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "models/users.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15188,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12786,
+								12786
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 8722.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 21,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "test/fixtures/dbtools.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1244,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								368,
+								368
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 35,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "test/api.documents.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5697,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4658,
+								4658
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2940.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "test/fixtures/Documents.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 631,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								370,
+								370
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "test/api.users.addresses.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4561,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4432,
+								4432
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2758.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 22,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "app/passport.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6562,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1504,
+								1504
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 243.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 20,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "test/api.users.create.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4584,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1174,
+								1174
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 567.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 19,
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "test/api.users.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6288,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								279,
+								279
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 18,
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "test/api.users.likes.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2757,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1870,
+								1870
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1582.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 26,
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"file": "test/api.users.status.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2235,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2222,
+								2222
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1302.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 25,
+					"type": "text"
+				},
+				{
+					"buffer": 23,
+					"file": "app/bus.routes.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1367,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								951,
+								951
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 24,
+					"type": "text"
+				},
+				{
+					"buffer": 24,
+					"file": "test/api.users.update.secure.admin.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1895,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								247,
+								247
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 34,
+					"type": "text"
+				},
+				{
+					"buffer": 25,
+					"file": "test/api.users.update.secure.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3810,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3798,
+								3798
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1988.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 26,
+					"file": "test/db.maintain.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1574,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								193,
+								193
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 33,
+					"type": "text"
+				},
+				{
+					"buffer": 27,
+					"file": "test/system.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7373,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6567,
+								6567
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3486.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 28,
+					"file": "app/express.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7139,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4894,
+								4894
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3668.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 29,
+					"file": "app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3436,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2151,
+								2151
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1459.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 30,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4260,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								75,
+								75
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 31,
+					"type": "text"
+				},
+				{
+					"buffer": 31,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1662,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								356,
+								356
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 30,
+					"type": "text"
+				},
+				{
+					"buffer": 32,
+					"file": "config/config-test.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2696,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								114,
+								114
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 29,
+					"type": "text"
+				},
+				{
+					"buffer": 33,
+					"file": "config/config-shared.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1233,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								280,
+								280
+							]
+						],
+						"settings":
+						{
+							"auto_name": "module.exports = {",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 34,
+					"file": "app/config.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 789,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								615,
+								615
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 35,
+					"file": "docs/changelog.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 574,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								574,
+								574
+							]
+						],
+						"settings":
+						{
+							"auto_name": "# Changes",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 35.0
+		"height": 30.0
 	},
 	"input":
 	{
@@ -929,7 +2313,7 @@
 	"project": "evaletolab-express-seed.sublime-project",
 	"replace":
 	{
-		"height": 66.0
+		"height": 56.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1479,7 +2863,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 600.0,
+	"side_bar_width": 436.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
