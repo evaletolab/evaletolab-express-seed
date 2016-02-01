@@ -1,5 +1,6 @@
 # evaletolab-express-seed
-This is the seed of the karibou project 
+This is the seed of the Krabou CMS project 
+
 
 [![Build Status](https://travis-ci.org/evaletolab/evaletolab-express-seed.svg?branch=master)](https://travis-ci.org/evaletolab/evaletolab-express-seed)
 
@@ -26,7 +27,7 @@ Running
 ## API
 Current API version is v1. You need to prepend `v1/` to app requests except auth.
 
-* backend, http://api.karibou.evaletolab.ch/v1 
+* backend, http://api.cms.evaletolab.ch/v1/config 
 
 ### Auth
 All requests that change state (`POST`, `PUT`, `DELETE`) require authentication.
@@ -44,7 +45,7 @@ All requests that change state (`POST`, `PUT`, `DELETE`) require authentication.
   app.post('/v1/recover/:token/:email/password'                           , users.recover);
   
 ```
-**Example:** http://api.karibou.evaletolab.ch/v1/users/me
+**Example:** http://api.cms.evaletolab.ch/v1/users/me
 
 
 
