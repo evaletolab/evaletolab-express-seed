@@ -1,16 +1,18 @@
 # evaletolab-express-seed
-This is the seed of the Krabou CMS backend project. With this project we have a complet seed with those features:
-* continuous integration
-* sendmail with template 
-* multilingue CMS
-* basic CMS (for menu and documents)
-* sendmail for catched errors (in frontend to!!)
-* log activities 
+This is the seed of the Krabou CMS backend project. This is a complet seed with some cool features:
+* continuous integration,
+* sendmail with template,
+* multilingue CMS,
+* basic CMS (for menu and documents),
+* sendmail for catched errors (also in frontend !!),
+* log activities,
 * complet user management (create, forget mail, update profile, admin, ...)
 
 MISSING
 * replacing cookies by JWT token
 
+DEMO
+* [cms.evaletolab.ch](http://cms.evaletolab.ch)
 
 [![Build Status](https://travis-ci.org/evaletolab/evaletolab-express-seed.svg?branch=master)](https://travis-ci.org/evaletolab/evaletolab-express-seed)
 
