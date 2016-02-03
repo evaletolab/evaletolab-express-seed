@@ -1,5 +1,15 @@
 # evaletolab-express-seed
-This is the seed of the Krabou CMS project 
+This is the seed of the Krabou CMS backend project. With this project we have a complet seed with those features:
+* continuous integration
+* sendmail with template 
+* multilingue CMS
+* basic CMS (for menu and documents)
+* sendmail for catched errors (in frontend to!!)
+* log activities 
+* complet user management (create, forget mail, update profile, admin, ...)
+
+MISSING
+* replacing cookies by JWT token
 
 
 [![Build Status](https://travis-ci.org/evaletolab/evaletolab-express-seed.svg?branch=master)](https://travis-ci.org/evaletolab/evaletolab-express-seed)
@@ -23,6 +33,23 @@ Running
 
     $ node app
 
+### Continuous integration - Forever & gihub
+Each time you do a push your aplication will restart and update all dependencies, Cool!
+
+Install
+    $ sudo npm install -g forever
+
+Run
+    $ forever start --minUptime 2000 --spinSleepTime 2000 --watchIgnore "*newrelic*" --uid "cms" -w -a -f  -o $HOME/www/logs/node-cms.log  app    
+    $ forever list
+    info:    Forever processes running
+    data:        uid     command         script forever pid   id logfile                            uptime       
+    data:    [1] cms     /usr/bin/nodejs app    30454   30460    /home/container/.forever/cms.log     0:0:0:5.429 
+
+Configure gihub webhooks 'On push event'
+    1) https://your.api.domain.com/v1/github/webhook    
+    2) in your configuration authorize reference (config.admin.webhook.release == branch name)
+    3) setup a secret (config.admin.webhook.secret)
 
 ## API
 Current API version is v1. You need to prepend `v1/` to app requests except auth.
@@ -49,23 +76,10 @@ All requests that change state (`POST`, `PUT`, `DELETE`) require authentication.
 
 
 
-## Copyright & dual License 
-<!--
-4. You may not use the work for some commercial purposes — unless you get the Karibou's permission. 
- * You can sell copies of the software, 
- * **YOU CAN NOT USE THE SOFTWARE TO BUILD A ONLINE GROCERY STORE WITHOUT THE KARIBOU PERMISSION.**
--->
-
+## Copyright 
 * Copyright (c) 2015 Karibou (http://karibou.ch/)
 * Copyright (c) 2012 Olivier Evalet (http://evaletolab.ch/)
 
-Karibou is distributed under a dual license: an open source license, and a commercial license. The open source license under which Karibou API is distributed is the AGPL V3 to protect the long term interests of the community – you are free to use it with no restrictions but if you change the server code, then those code changes must be contributed back. **it means,**
-
-1. If you run a modified program on a server and let other users contact him, your server should also allow them to download the source code for the version amended in operation. 
-2. The download link must be visible and accessible from the footer website, 
-3. The download link should also display the copyright holder  : developped with :green_heart: by Karibou.ch
-
-For anyone who wants to develop and use but does not want to release the source code for their application, Karibou is able to provide a commercial licence. You have to contact [Karibou](license@karibou.ch) to get a commercial license.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
