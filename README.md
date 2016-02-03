@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/evaletolab/evaletolab-express-seed.svg?branch=master)](https://travis-ci.org/evaletolab/evaletolab-express-seed)
+
 # evaletolab-express-seed
 This is the seed of the Krabou CMS backend project. This is a complet seed with some cool features:
 * continuous integration,
@@ -12,9 +14,8 @@ TODO
 * replacing cookies by JWT token
 
 DEMO
-* [cms.evaletolab.ch](http://cms.evaletolab.ch) [source](https://github.com/evaletolab/evaletolab-angular-seed)
+* [cms.evaletolab.ch](http://cms.evaletolab.ch) ([source](https://github.com/evaletolab/evaletolab-angular-seed))
 
-[![Build Status](https://travis-ci.org/evaletolab/evaletolab-express-seed.svg?branch=master)](https://travis-ci.org/evaletolab/evaletolab-express-seed)
 
 ## Getting started
 This is a backend part of your futur application.
