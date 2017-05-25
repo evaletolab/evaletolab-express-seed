@@ -172,6 +172,7 @@ exports.update=function (req, res) {
     // slug this doc TODO the slug change the final url && url can be bookmarked!! WE SHOULD SAVE SLUG VERSIONS
     if(req.body.title&&doc.title[lang]!==req.body.title[lang]){
       doc.slug.push(req.body.title[lang].slug());
+      doc.slug=_.uniq(doc.slug);
     }    
 
 

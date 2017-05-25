@@ -22,7 +22,7 @@ var EnumDocumentType=function (type) {
   }
   var types=config.shared.document.types.slice(0);
   for (var i = config.shared.home.views.length - 1; i >= 0; i--) {
-    types.push(config.shared.home.views[i].name);
+    types.push(config.shared.home.views[i].name.toLowerCase());
   };
 
   return (types.indexOf(type)!==-1);
