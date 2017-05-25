@@ -1,18 +1,21 @@
+[![Build Status](https://travis-ci.org/evaletolab/evaletolab-express-seed.svg?branch=master)](https://travis-ci.org/evaletolab/evaletolab-express-seed)
+
 # evaletolab-express-seed
-This is the seed of the Krabou CMS backend project. With this project we have a complet seed with those features:
-* continuous integration
-* sendmail with template 
-* multilingue CMS
-* basic CMS (for menu and documents)
-* sendmail for catched errors (in frontend to!!)
-* log activities 
+This is the seed of the Krabou CMS backend project. This is a complet seed with some cool features:
+* continuous integration,
+* sendmail with template,
+* i18n (en,fr,de) CMS,
+* basic CMS (for menu and documents),
+* receive mail for catched errors,
+* log activities,
 * complet user management (create, forget mail, update profile, admin, ...)
 
-MISSING
+TODO
 * replacing cookies by JWT token
 
+DEMO
+* [cms.evaletolab.ch](http://cms.evaletolab.ch) ([source](https://github.com/evaletolab/evaletolab-angular-seed))
 
-[![Build Status](https://travis-ci.org/evaletolab/evaletolab-express-seed.svg?branch=master)](https://travis-ci.org/evaletolab/evaletolab-express-seed)
 
 ## Getting started
 This is a backend part of your futur application.
@@ -35,11 +38,11 @@ Running
 
 ### Continuous integration - Forever & gihub
 Each time you do a push your aplication will restart and update all dependencies, Cool!
-
 Install
     $ sudo npm install -g forever
 
 Run
+
     $ forever start --minUptime 2000 --spinSleepTime 2000 --watchIgnore "*newrelic*" --uid "cms" -w -a -f  -o $HOME/www/logs/node-cms.log  app    
     $ forever list
     info:    Forever processes running
@@ -47,6 +50,7 @@ Run
     data:    [1] cms     /usr/bin/nodejs app    30454   30460    /home/container/.forever/cms.log     0:0:0:5.429 
 
 Configure gihub webhooks 'On push event'
+
     1) https://your.api.domain.com/v1/github/webhook    
     2) in your configuration authorize reference (config.admin.webhook.release == branch name)
     3) setup a secret (config.admin.webhook.secret)
