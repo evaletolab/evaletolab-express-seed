@@ -4,7 +4,7 @@ var app = require("../app");
 var db = require('mongoose');
 var dbtools = require("./fixtures/dbtools");
 var should = require("should");require("should-http");
-var data = dbtools.fixtures(["Users.js","Categories.js"]);
+var data = dbtools.fixtures(["Users.js""]);
 
 
 describe("api.users", function(){
@@ -16,24 +16,24 @@ describe("api.users", function(){
 
   before(function(done){
     dbtools.clean(function(e){
-      dbtools.load(["../fixtures/Users.js","../fixtures/Categories.js"],db,function(err){
+      dbtools.load(["../fixtures/Users.js"],db,function(err){
         should.not.exist(err);
         done();
       });
-    });      
+    });
   });
 
-  
+
   after(function(done){
-    dbtools.clean(function(){    
+    dbtools.clean(function(){
       done();
-    });    
+    });
   });
-  
+
 
   var user;
 
-  it('POST /login should return 200',function(done){  
+  it('POST /login should return 200',function(done){
     request(app)
       .post('/login')
       .send({ email:"evaleto@gluck.com", provider:'local', password:'password' })
@@ -45,10 +45,10 @@ describe("api.users", function(){
         cookie = res.headers['set-cookie'];
         user=res.body;
         //res.headers.location.should.equal('/');
-        done();        
+        done();
       });
   });
-   
+
   it('GET /v1/users/me should return 200',function(done){
     request(app)
       .get('/v1/users/me')
@@ -63,7 +63,7 @@ describe("api.users", function(){
 
   it('POST update user with empty data {} return 400',function(done){
     request(app)
-      .post('/v1/users/'+user.id)      
+      .post('/v1/users/'+user.id)
       .set('cookie', cookie)
       .end(function (err,res) {
         res.should.have.status(400);
@@ -74,7 +74,7 @@ describe("api.users", function(){
   it('POST update other user without admin role, should return 401',function(done){
     var u=data.Users[0];
     request(app)
-      .post('/v1/users/'+data.Users[1].id)      
+      .post('/v1/users/'+data.Users[1].id)
       .send(u)
       .set('cookie', cookie)
       .end(function (err,res) {
@@ -86,7 +86,7 @@ describe("api.users", function(){
   it('POST update user, with different user.id silently avoid it',function(done){
     var u=data.Users[0];
     request(app)
-      .post('/v1/users/'+user.id)      
+      .post('/v1/users/'+user.id)
       .send(_.extend({},u,{id:0987654}))
       .set('cookie', cookie)
       .end(function (err,res) {
@@ -99,7 +99,7 @@ describe("api.users", function(){
   it('POST update user, with different user.status silently avoid it',function(done){
     var u=data.Users[0];
     request(app)
-      .post('/v1/users/'+user.id)      
+      .post('/v1/users/'+user.id)
       .send(_.extend({},u,{status:false}))
       .set('cookie', cookie)
       .end(function (err,res) {
@@ -112,7 +112,7 @@ describe("api.users", function(){
   it('POST update user, with empty user.email.address silently avoid it',function(done){
     var u=data.Users[0];
     request(app)
-      .post('/v1/users/'+user.id)      
+      .post('/v1/users/'+user.id)
       .send(_.extend({},u,{email:{status:false}}))
       .set('cookie', cookie)
       .end(function (err,res) {
@@ -125,7 +125,7 @@ describe("api.users", function(){
   it('POST update user, with different user.email.status silently avoid it',function(done){
     var u=data.Users[0];
     request(app)
-      .post('/v1/users/'+user.id)      
+      .post('/v1/users/'+user.id)
       .send(_.extend({},u,{email:{status:false,address:user.email.address}}))
       .set('cookie', cookie)
       .end(function (err,res) {
@@ -137,6 +137,5 @@ describe("api.users", function(){
   });
 
 
-     
-});
 
+});

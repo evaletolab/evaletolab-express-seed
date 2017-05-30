@@ -5,7 +5,7 @@ var db = require("mongoose");
 
 var dbtools = require("./fixtures/dbtools");
 var should = require("should");
-var data = dbtools.fixtures(["Users.js","Categories.js"]);
+var data = dbtools.fixtures(["Users.js"]);
 
 
 
@@ -18,23 +18,23 @@ describe("Users", function(){
         should.not.exist(err);
         done();
       });
-    });      
-  });  
+    });
+  });
 
   after(function(done){
     dbtools.clean(function(){
       done();
-    });      
+    });
   });
 
   describe("login",function(){
-    
+
     it("validate inexistant  user", function(done){
   		db.model('Users').findOne({ id: 1234 }, function (err, user) {
   		  should.not.exist(user);
     		return done();
   		});
-      
+
     });
 
     it("inexistant 'local' user should not automatically created ", function(done){
@@ -43,7 +43,7 @@ describe("Users", function(){
    		  should.not.exist(user);
     		return done();
   		});
-      
+
     });
 
     it("create user with new email only ", function(done){
@@ -53,7 +53,7 @@ describe("Users", function(){
         user.email.status.should.equal(true);
         return done();
       });
-      
+
     });
 
     it("valide Oauth id should create new user ", function(done){
@@ -62,7 +62,7 @@ describe("Users", function(){
   		  user.id.should.equal(1234);
     		return done();
   		});
-      
+
     });
 
     it("find existant Oauth user", function(done){
@@ -70,7 +70,7 @@ describe("Users", function(){
   		  user.email.address.should.equal(data.Users[0].email.address);
     		return done();
   		});
-      
+
     });
 
     it("wrong provider generate an error", function(done){
@@ -78,7 +78,7 @@ describe("Users", function(){
         err.errors.provider.path.should.equal('provider');
         err.errors.provider.value.should.equal('toto');
     		return done();
-  		});      
+  		});
     });
 
     it("duplicate id, one for local and one for facebook, generate an error", function(done){
@@ -86,16 +86,16 @@ describe("Users", function(){
     		should.exist(err);
     		err.should.containEql('utilisé par le provider');
         done()
-  		});      
+  		});
     });
-        
+
 
     it.skip("validate provider", function(done){
-      
+
     });
-    
+
     it.skip("validate provider token", function(done){
-      
+
     });
 
     it("registers a new User get duplicate email error", function(done){
@@ -124,10 +124,10 @@ describe("Users", function(){
 
 
   });
-  
 
-  
-  
+
+
+
   it('should return true if the user has role', function (done) {
       db.model('Users').findOne({id:1279482741765243},function(err,profile){
         profile.hasRole('admin').should.be.true;
@@ -135,14 +135,14 @@ describe("Users", function(){
         done();
       });
    });
-   
+
    it('should return false if the user does not have role', function (done) {
      db.model('Users').findOne({id:1279482741765243},function(err,profile){
        profile.hasRole('astronaut').should.be.false;
        profile.hasRole('cowboy').should.be.false;
        done();
      });
-   });  
+   });
 
   it.skip("retrieves by email", function(done){
     db.model('Users').findByEmail(currentUsers.email, function(doc){
@@ -159,7 +159,7 @@ describe("Users", function(){
   });
 
   it.skip("forget password", function(done){
-    
+
   	done();
   });
 
@@ -178,7 +178,7 @@ describe("Users", function(){
 
   it.skip("registers a new User only via twitter", function(done){
   });
-  
+
   describe("Customers", function(){
     it.skip("Customers can view their order history and order statuses", function(done){
     });
@@ -210,7 +210,6 @@ describe("Users", function(){
     it.skip("Breadcrumb trail for easy site navigation", function(done){
     });
   });
-    
-  
-});
 
+
+});

@@ -1,6 +1,9 @@
 var bus = require("./bus"),
     mailchimp =require("./bus.routes.mailchimp"),
-    activity =require("./bus.routes.activity"),
+
+//
+// TODO import activity from karibou-api
+//    activity =require("./bus.routes.activity"),
     dummy=function(){},
     onTrace, onMessage;
 
@@ -47,9 +50,9 @@ bus.on('user.update.status.password',dummy)
 
 bus.on('mailchimp.subscribe',mailchimp.subscribe)
 
-bus.on('activity.create',activity.create);
-bus.on('activity.update',activity.update);
-bus.on('activity.delete',activity.delete);
+// bus.on('activity.create',activity.create);
+// bus.on('activity.update',activity.update);
+// bus.on('activity.delete',activity.delete);
 
 //
 // bus.on('',function(mail,cb){})

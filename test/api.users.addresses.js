@@ -4,7 +4,7 @@ var app = require("../app");
 var db = require('mongoose');
 var dbtools = require("./fixtures/dbtools");
 var should = require("should");require("should-http");
-var data = dbtools.fixtures(["Users.js","Categories.js"]);
+var data = dbtools.fixtures(["Users.js"]);
 
 
 describe("api.users.addresses", function(){
@@ -16,20 +16,17 @@ describe("api.users.addresses", function(){
 
   before(function(done){
     dbtools.clean(function(e){
-      dbtools.load(["../fixtures/Categories.js"],db,function(err){
-        should.not.exist(err);
-        done();
-      });
-    });      
+      done();
+    });
   });
 
-  
+
   after(function(done){
-    dbtools.clean(function(){    
+    dbtools.clean(function(){
       done();
-    });    
+    });
   });
-  
+
 
 
 
@@ -41,20 +38,20 @@ describe("api.users.addresses", function(){
       password:"123456",
       confirm:"123456"
     };
-  
+
     request(app)
       .post('/register')
       .send(r)
-      .end(function(err,res){      
+      .end(function(err,res){
         res.should.have.status(200);
-        done();        
+        done();
       });
   });
 
 
 
 
-  it('POST /login return 200',function(done){  
+  it('POST /login return 200',function(done){
     request(app)
       .post('/login')
       .send({ email:"reg1@test.com", provider:'local', password:'123456' })
@@ -66,11 +63,11 @@ describe("api.users.addresses", function(){
         cookie = res.headers['set-cookie'];
         user=res.body;
         //res.headers.location.should.equal('/');
-        done();        
+        done();
       });
   });
 
-   
+
   it('GET /v1/users/me should return 200',function(done){
     request(app)
       .get('/v1/users/me')
@@ -97,7 +94,7 @@ describe("api.users.addresses", function(){
     u.addresses.push(address)
     request(app)
       .post('/v1/users/'+user.id)
-      .send(u)     
+      .send(u)
       .set('cookie', cookie)
       .end(function(err,res){
         res.should.have.status(400);
@@ -126,7 +123,7 @@ describe("api.users.addresses", function(){
     u.addresses.push(address)
     request(app)
       .post('/v1/users/'+user.id)
-      .send(u)     
+      .send(u)
       .set('cookie', cookie)
       .end(function(err,res){
         res.should.have.status(400);
@@ -153,7 +150,7 @@ describe("api.users.addresses", function(){
     u.addresses.push(address)
     request(app)
       .post('/v1/users/'+user.id)
-      .send(u)     
+      .send(u)
       .set('cookie', cookie)
       .end(function(err,res){
         res.should.have.status(400);
@@ -180,7 +177,7 @@ describe("api.users.addresses", function(){
     u.addresses.push(address)
     request(app)
       .post('/v1/users/'+user.id)
-      .send(u)     
+      .send(u)
       .set('cookie', cookie)
       .end(function(err,res){
         res.should.have.status(200);
@@ -192,6 +189,5 @@ describe("api.users.addresses", function(){
 
 
 
-      
-});
 
+});

@@ -4,7 +4,7 @@ var app = require("../app");
 var db = require('mongoose');
 var dbtools = require("./fixtures/dbtools");
 var should = require("should");require("should-http");
-var data = dbtools.fixtures(["Users.js","Categories.js"]);
+var data = dbtools.fixtures(["Users.js"]);
 
 
 describe("api.users", function(){
@@ -16,24 +16,24 @@ describe("api.users", function(){
 
   before(function(done){
     dbtools.clean(function(e){
-      dbtools.load(["../fixtures/Users.js","../fixtures/Categories.js"],db,function(err){
+      dbtools.load(["../fixtures/Users.js"],db,function(err){
         should.not.exist(err);
         done();
       });
-    });      
+    });
   });
 
-  
+
   after(function(done){
-    dbtools.clean(function(){    
+    dbtools.clean(function(){
       done();
-    });    
+    });
   });
-  
+
 
   var user;
 
-  it('POST /login should return 200',function(done){  
+  it('POST /login should return 200',function(done){
     request(app)
       .post('/login')
       .send({ email:"evaleto@gmail.com", provider:'local', password:'password' })
@@ -41,14 +41,14 @@ describe("api.users", function(){
         res.should.have.status(200);
         cookie = res.headers['set-cookie'];
         user=res.body;
-        done();        
+        done();
       });
   });
 
   it('POST update user, with different user.email.status be ok for admin',function(done){
     var u=data.Users[1];
     request(app)
-      .post('/v1/users/'+user.id)      
+      .post('/v1/users/'+user.id)
       .send(_.extend({},u,{email:{status:false}}))
       .set('cookie', cookie)
       .end(function (err,res) {
@@ -62,7 +62,7 @@ describe("api.users", function(){
   it('POST update other user with admin role, should return 200',function(done){
     var u=data.Users[0];
     request(app)
-      .post('/v1/users/'+data.Users[0].id)      
+      .post('/v1/users/'+data.Users[0].id)
       .send(u)
       .set('cookie', cookie)
       .end(function (err,res) {
@@ -74,4 +74,3 @@ describe("api.users", function(){
 
 
 });
-

@@ -24,12 +24,12 @@ config.cors.allowedDomains.forEach(function(origin){
 
 exports.index = function(app){
   return function(req, res) {
-    var model={ 
-      api: app.routes, 
-      user: req.user, 
+    var model={
+      api: app.routes,
+      user: req.user,
       filter:function(api){
         return _.filter(api, function(route){return route.path.indexOf("/v1")>-1;});
-      } 
+      }
     };
     res.render('home',  model);
   }
@@ -67,9 +67,9 @@ exports.trace = function(req, res) {
       var len=req.body.stacktrace.frames.length
       console.log("ERROR[UI]",
         req.body.message,
-        req.body.request.headers, 
-        req.body.request.url, 
-        req.body.site, 
+        req.body.request.headers,
+        req.body.request.url,
+        req.body.site,
         req.body.stacktrace.frames[len-1].pre_context)
     }
     res.json({});
@@ -81,7 +81,7 @@ exports.message = function(req, res) {
       // return res.status(401).send("invalid token")
     }
     var mail={
-      title:"[karibou-subscribe] : "
+      title:"[subscribe] : "
     };
     if(req.params.subject){
       if(config.mailing[req.params.subject]){
@@ -153,7 +153,7 @@ exports.email=function(req,res){
 }
 
 exports.activities=function (req,res) {
-  var now=new Date(), 
+  var now=new Date(),
       criteria={
         month:req.query.month||(now.getMonth()+1),
         year:req.query.year,
@@ -197,7 +197,7 @@ exports.sitemap=function(req,res){
     return sitemap.toXML( function (xml) {
         res.header('Content-Type', 'application/xml');
         res.send( xml );
-    });    
+    });
   }
 
   // else
@@ -224,7 +224,7 @@ exports.sitemap=function(req,res){
     sitemap.toXML( function (xml) {
         res.header('Content-Type', 'application/xml');
         res.send( xml );
-    });    
+    });
 
   })
 }
@@ -258,7 +258,7 @@ exports.github=function(req,res){
 
 
   //
-  // checks webhook config 
+  // checks webhook config
   if(!config.admin.webhook||!config.admin.webhook.secret){
     return res.status(400).send('CI error (1)')
   }
@@ -266,14 +266,14 @@ exports.github=function(req,res){
   //
   // checks push release
   if(req.body.ref.indexOf(config.admin.webhook.release)===-1){
-    return res.status(400).send('CI error (2)')    
+    return res.status(400).send('CI error (2)')
   }
 
   //
   // checks github posting params
   var  sig   = req.headers['x-hub-signature']
       ,event = req.headers['x-github-event']
-      ,id    = req.headers['x-github-delivery']  
+      ,id    = req.headers['x-github-delivery']
       ,verify= verify(config.admin.webhook.secret,req.body)
 
 
@@ -295,7 +295,7 @@ exports.github=function(req,res){
   console.log('============')
   var child=spawn('node-continuous.sh',[config.admin.webhook.release,config.express.port],{detached:true})
   child.stdout.on('data', function (stdout) {
-    console.log("github",event,stdout.toString('utf8'))    
+    console.log("github",event,stdout.toString('utf8'))
   })
 
   child.stderr.on('data', function (error) {

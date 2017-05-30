@@ -5,7 +5,7 @@ var db = require('mongoose');
 var dbtools = require("./fixtures/dbtools");
 var _= require('underscore');
 var should = require("should");require("should-http");
-var data = dbtools.fixtures(["Users.js","Categories.js"]);
+var data = dbtools.fixtures(["Users.js"]);
 
 
 describe("api.users.create", function(){
@@ -17,20 +17,17 @@ describe("api.users.create", function(){
 
   before(function(done){
     dbtools.clean(function(e){
-      dbtools.load(["../fixtures/Categories.js"],db,function(err){
-        should.not.exist(err);
-        done();
-      });
-    });      
+      done();
+    });
   });
 
-  
+
   after(function(done){
-    dbtools.clean(function(){    
+    dbtools.clean(function(){
       done();
-    });    
+    });
   });
-  
+
 
 
 
@@ -48,13 +45,13 @@ describe("api.users.create", function(){
       password:"123456",
       confirm:"123456"
     };
-  
+
     request(app)
       .post('/register')
       .send(r)
-      .end(function(err,res){   
+      .end(function(err,res){
         res.should.have.status(200);
-        done();        
+        done();
       });
   });
 
@@ -66,16 +63,16 @@ describe("api.users.create", function(){
       password:"123456",
       confirm:"123456"
     };
-  
+
     request(app)
       .post('/register')
       .send(r)
-      .end(function(err,res){      
+      .end(function(err,res){
         res.should.have.status(400);
-        done();        
+        done();
       });
   });
-  
+
   it('POST /register with wrong confirmation password should return 400 ',function(done){
     var r={
       email:"reg2@test.com",
@@ -84,16 +81,16 @@ describe("api.users.create", function(){
       password:"123456",
       confirm:"123"
     };
-  
+
     request(app)
       .post('/register')
       .send(r)
-      .end(function(err,res){      
+      .end(function(err,res){
         res.should.have.status(400);
-        done();        
+        done();
       });
   });
-  
+
   it('POST /register short password should return 400 ',function(done){
     var r={
       email:"reg2@test.com",
@@ -102,13 +99,13 @@ describe("api.users.create", function(){
       password:"1234",
       confirm:"1234"
     };
-  
+
     request(app)
       .post('/register')
       .send(r)
-      .end(function(err,res){      
+      .end(function(err,res){
         res.should.have.status(400);
-        done();        
+        done();
       });
   });
 
@@ -119,13 +116,13 @@ describe("api.users.create", function(){
       password:"123456",
       confirm:"123456"
     };
-  
+
     request(app)
       .post('/register')
       .send(r)
-      .end(function(err,res){      
+      .end(function(err,res){
         res.should.have.status(400);
-        done();        
+        done();
       });
   });
 
@@ -139,13 +136,13 @@ describe("api.users.create", function(){
       phoneNumbers:[{what:'phone'}],
       addresses:[]
     };
-  
+
     request(app)
       .post('/register')
       .send(r)
-      .end(function(err,res){      
+      .end(function(err,res){
         res.should.have.status(400);
-        done();        
+        done();
       });
   });
 
@@ -159,27 +156,27 @@ describe("api.users.create", function(){
       phoneNumbers:[],
       addresses:[{what:'phone'}]
     };
-  
+
     request(app)
       .post('/register')
       .send(r)
-      .end(function(err,res){      
+      .end(function(err,res){
         res.should.have.status(400);
-        done();        
+        done();
       });
   });
 
   it('POST /register without data should return 400 ',function(done){
     request(app)
       .post('/register')
-      .end(function(err,res){      
+      .end(function(err,res){
         res.should.have.status(400);
-        done();        
+        done();
       });
   });
 
 
-  it('POST /login return 200',function(done){  
+  it('POST /login return 200',function(done){
     request(app)
       .post('/login')
       .send({ email:"reg1@test.com", provider:'local', password:'123456' })
@@ -189,13 +186,13 @@ describe("api.users.create", function(){
         should.not.exist(res.body.hash)
         should.not.exist(res.body.salt)
         cookie = res.headers['set-cookie'];
-        
+
         //res.headers.location.should.equal('/');
-        done();        
+        done();
       });
   });
 
-   
+
   it('GET /v1/users/me should return 200',function(done){
     request(app)
       .get('/v1/users/me')
@@ -203,6 +200,5 @@ describe("api.users.create", function(){
       .expect(200,done);
 
   });
-      
-});
 
+});

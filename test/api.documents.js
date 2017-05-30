@@ -6,7 +6,7 @@ var dbtools = require("./fixtures/dbtools");
 var should = require("should");require("should-http");
 var data = dbtools.fixtures(["Users.js",'Documents.js']);
 
-// 12345 ==> evaleto@gluck.com 
+// 12345 ==> evaleto@gluck.com
 // 12346 ==> evaleto@gmail.com (ADMIN)
 // 12347 ==> delphine@gmail.com
 
@@ -19,22 +19,22 @@ describe("api.documents", function(){
   var request= require('supertest');
 
   var _=require('underscore');
-  
+
 
   before(function(done){
     dbtools.clean(function(e){
-      dbtools.load(["../fixtures/Users.js","../fixtures/Categories.js","../fixtures/Documents.js"],db,function(err){
+      dbtools.load(["../fixtures/Users.js","../fixtures/Documents.js"],db,function(err){
         console.log(err)
         should.not.exist(err);
         done()
       });
-    });      
+    });
   });
 
   after(function(done){
-    dbtools.clean(function(){    
+    dbtools.clean(function(){
       done();
-    });    
+    });
   });
 
   it('GET /v1/documents/category/page should return 200',function(done){
@@ -71,7 +71,7 @@ describe("api.documents", function(){
       .send(doc)
       .expect(401,done);
   });
-  
+
   describe("authentication ", function(){
     var cookie, delphine, gluck;
     it("user admin",function (done) {
@@ -84,7 +84,7 @@ describe("api.documents", function(){
           res.body.email.address.should.equal("evaleto@gmail.com");
           cookie = res.headers['set-cookie'];
           should.exist(cookie);
-          done();        
+          done();
       });
     })
 
@@ -98,9 +98,9 @@ describe("api.documents", function(){
           res.body.email.address.should.equal("delphine@gmail.com");
           delphine = res.headers['set-cookie'];
           should.exist(delphine);
-          done();        
+          done();
       });
-    });     
+    });
 
     it("user non admin gluck", function(done){
       request(app)
@@ -112,12 +112,12 @@ describe("api.documents", function(){
           res.body.email.address.should.equal("evaleto@gluck.com");
           gluck = res.headers['set-cookie'];
           should.exist(gluck);
-          done();        
+          done();
       });
-    });     
+    });
 
 
-     
+
     it('GET /v1/documents with owner should return 200',function(done){
       request(app)
         .get('/v1/documents')
@@ -148,7 +148,7 @@ describe("api.documents", function(){
         .set('Content-Type','application/json')
         .send({})
         .expect(400,done);
-    });    
+    });
 
     it('POST /v1/documents should return 200   ',function(done){
       var doc={
@@ -173,7 +173,7 @@ describe("api.documents", function(){
           done()
           })
         });
-    });    
+    });
 
     it.skip('POST /v1/documents should return 200   ',function(done){
       var doc=_.extend({},data.Documents[0]);
@@ -186,25 +186,24 @@ describe("api.documents", function(){
             console.log(err)
           done()
         });
-    });    
+    });
 
     it.skip('POST update /v1/documents/1000002 non owner return 401  ',function(done){
 
-    });    
+    });
 
 
     it.skip('POST update /v1/documents/1000002 home field should return 401 for not admin ',function(done){
 
-    });    
+    });
 
     it.skip('POST update /v1/documents/1000002 change sku field should not be affected',function(done){
 
-    });    
+    });
   });
-      
-  
-    
 
-  
+
+
+
+
 });
-

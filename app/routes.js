@@ -1,6 +1,6 @@
 
 
-  
+
 module.exports = function(app, config, passport) {
   var path='../controllers/';
 
@@ -15,13 +15,14 @@ module.exports = function(app, config, passport) {
 
 
   //
-  // wrap a request to a simple queuing system. 
+  // wrap a request to a simple queuing system.
   // It's not efficient, but this should avoid race condition on product and orders
   var queue=require('../app/queue')(1,true);
   var queued=function(f){
-    return function(req,res){
-      queue.defer(f,req,res)
-    }
+    return f;
+    // return function(req,res){
+    //   queue.defer(f,req,res)
+    // }
   }
 
   function nocached(req, res, next) {
@@ -34,15 +35,15 @@ module.exports = function(app, config, passport) {
     res.setHeader('Cache-Control', 'public, max-age=120');
     return next();
   }
-	
+
   function longcached(req, res, next) {
     res.setHeader('Cache-Control', 'public, max-age=120000');
     return next();
   }
-  
-	
+
+
   //
-  // auth 
+  // auth
   app.get ('/logout', auth.logout);
  	app.get ('/login', auth.login);
   app.post('/login', queued(auth.login_post));
@@ -55,7 +56,7 @@ module.exports = function(app, config, passport) {
   app.get ('/seo/sitemap.xml', api.sitemap);
   app.get ('/robots.txt', api.robots);
   app.get ('/seo/robots.txt', api.robots);
-  
+
   //
   // documents
   app.get ('/v1/documents', auth.ensureAuthenticated, docs.findByOwner);
@@ -68,9 +69,9 @@ module.exports = function(app, config, passport) {
 
   //
   // activities
-  app.get('/v1/activities', auth.ensureAuthenticated,api.activities);
+  // app.get('/v1/activities', auth.ensureAuthenticated,api.activities);
 
-  
+
 
 
   //
@@ -84,10 +85,10 @@ module.exports = function(app, config, passport) {
   app.post('/v1/users/:id/status', auth.ensureAdmin,users.status);
   app.post('/v1/users/:id/password',users.ensureMe, users.password);
 
-  
-  // recover email  
+
+  // recover email
   app.post('/v1/recover/:token/:email/password', users.recover);
-  
+
   //
   // delete
   app.put('/v1/users/:id', auth.ensureAdmin, auth.checkPassword, users.remove);
@@ -95,7 +96,6 @@ module.exports = function(app, config, passport) {
 	//
 	// home
   app.get ('/', home.index(app));
-  app.get ('/welcome', home.welcome);
   app.get ('/v1', api.index(app));
 
   //
@@ -114,13 +114,13 @@ module.exports = function(app, config, passport) {
   app.post('/v1/github/webhook',api.github)
 
 
-  
+
   //
   // email validation
   app.get ('/v1/validate',auth.ensureAuthenticated, emails.list);
   app.post('/v1/validate/create',auth.ensureAuthenticated, emails.create);
   app.get ('/v1/validate/:uid/:email', emails.validate);
-  
+
   //
   // category
   // app.get ('/v1/category', cached, categories.list);
@@ -128,7 +128,7 @@ module.exports = function(app, config, passport) {
   // app.post('/v1/category', auth.ensureAdmin, categories.create);
   // app.post('/v1/category/:category', auth.ensureAdmin, categories.update);
   // app.put('/v1/category/:category', auth.ensureAdmin, auth.checkPassword, categories.remove);
-  
-  
+
+
 
 };

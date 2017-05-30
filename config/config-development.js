@@ -23,13 +23,8 @@ module.exports = {
   mailing:{
     'others':{
       name:'Others',
-      title:"[karibou-subscribe-others] : ",
+      title:"[subscribe-others] : ",
       mailchimp:'733ad74f31'
-    },
-
-    'main':{
-      title:"",
-      mailchimp:'50fe26a799'
     }
   },
 
@@ -39,7 +34,7 @@ module.exports = {
 
   document:{
     types:['recipe','post','bundle','page']
-  },  
+  },
 
 
   admin:{
@@ -73,9 +68,6 @@ module.exports = {
     ensureIndex:true
   },
 
-	nodetime:{
-	  apikey:'f39e0560aedf625a03b0b06dbcb015907c1a373'
-	},
 
  /**
   * Time to validate an email 3 minutes

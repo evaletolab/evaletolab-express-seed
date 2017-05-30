@@ -99,7 +99,7 @@ validate.postal = function (value) {
     context:{type:Schema.Types.Mixed},
 
 
-    // this is the stripe 
+    // this is the stripe
     gateway_id:{type:String, unique: true, select:false,sparse: true},
 
     /* make user valid/invalid */
@@ -140,11 +140,6 @@ UserSchema.statics.findOrCreate=function(u,callback){
       }
 
       if (!u.id && u['email.address']){
-        //
-        // this question is essential but it need a promise
-        // db.model('Sequences').nextUser(function(uid){
-        //})
-
         u.id=u['email.address'].hash()
         u["email.status"]=true;
       }
@@ -199,7 +194,7 @@ UserSchema.statics.findByCrireria = function(criteria, callback){
   var query={}, from=new Date(),to;
 
 
-  // 
+  //
   if(criteria.name){
     query['displayName']=new RegExp('^.*'+criteria.name+'.*$', "i");
   }
@@ -514,7 +509,7 @@ UserSchema.statics.updateStatus=function(id, status,callback){
 
 
 //
-// update user , the owner is 
+// update user , the owner is
 UserSchema.statics.findAndUpdate=function(id, u,callback){
 	var Users=this.model('Users');
   //http://mongoosejs.com/docs/api.html#model_Model.findByIdAndUpdate
@@ -577,7 +572,7 @@ UserSchema.statics.findAndUpdate=function(id, u,callback){
     //
 
 
-    // 
+    //
     // user update email
     if (u.email&&u.email.address) {
       if (user.email.address!==u.email.address){

@@ -4,7 +4,7 @@ var app = require("../app");
 var db = require('mongoose');
 var dbtools = require("./fixtures/dbtools");
 var should = require("should");
-var data = dbtools.fixtures(["Users.js","Categories.js"]);
+var data = dbtools.fixtures(["Users.js"]);
 
 var DbMaintain = db.model('DbMaintain');
 
@@ -16,7 +16,7 @@ describe("DbMaintain", function(){
 
 
   before(function(done){
-    dbtools.clean(function(){      
+    dbtools.clean(function(){
       done();
     });
   });

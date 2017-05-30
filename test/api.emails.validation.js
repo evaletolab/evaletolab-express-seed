@@ -5,7 +5,7 @@ var app = require("../app");
 var db = require('mongoose');
 var dbtools = require("./fixtures/dbtools");
 var should = require("should");require("should-http");
-var data = dbtools.fixtures(["Users.js","Categories.js"]);
+var data = dbtools.fixtures(["Users.js"]);
 
 
 
@@ -24,7 +24,7 @@ describe("api.validate", function(){
         should.not.exist(err);
         done();
       });
-    });      
+    });
   });
 
 
@@ -32,7 +32,7 @@ describe("api.validate", function(){
     dbtools.clean(function(){
       done();
     })
-  });  
+  });
 
 
 
@@ -59,7 +59,7 @@ describe("api.validate", function(){
   });
 
   it('POST /login with ID should return 200',function(done){
-  
+
     request(app)
       .post('/login')
       .send({ email:"evaleto@gluck.com", provider:'local', password:'password' })
@@ -68,7 +68,7 @@ describe("api.validate", function(){
         res.body.email.address.should.equal("evaleto@gluck.com");
         cookie = res.headers['set-cookie'];
         //res.headers.location.should.equal('/');
-        done();        
+        done();
       });
   });
 
@@ -82,7 +82,7 @@ describe("api.validate", function(){
         res.body.length.should.equal(0);
         done()
       });
-  });   
+  });
 
   var uid;
   it('POST /v1/validate/create should return 200',function(done){
@@ -124,7 +124,7 @@ describe("api.validate", function(){
         res.body.should.have.length(1);
         done()
       });
-  });   
+  });
 
 
 
@@ -136,13 +136,13 @@ describe("api.validate", function(){
         done()
       });
   });
-  
+
   it('GET /v1/validate/<uid>/evaleto@gluck.com should return 200 ',function(done){
     request(app)
       .get('/v1/validate/'+uid+'/evaleto@gluck.com')
       .set('cookie', cookie)
       .end(function(err,res){
-        res.should.have.status(200);        
+        res.should.have.status(200);
         done()
       });
   });
@@ -151,7 +151,7 @@ describe("api.validate", function(){
     request(app)
       .get('/v1/validate/'+uid+'/evaleto@gluck.com')
       .end(function(err,res){
-        res.should.have.status(400);        
+        res.should.have.status(400);
         res.text.should.containEql('n\'est plus disponible')
         done()
       });
@@ -162,7 +162,7 @@ describe("api.validate", function(){
       .get('/v1/validate/'+uid+'/evaleto@gluck.com')
       .set('cookie', cookie)
       .end(function(err,res){
-        res.should.have.status(400);        
+        res.should.have.status(400);
         res.text.should.containEql('n\'est plus disponible')
         done()
       });
@@ -174,8 +174,8 @@ describe("api.validate", function(){
       .set('cookie', cookie)
       .expect(404,done);
   });
-  
-  
+
+
   it('GET /v1/validate should return 200 ad 0 validation',function(done){
     request(app)
       .get('/v1/validate')
@@ -187,11 +187,10 @@ describe("api.validate", function(){
         res.body.should.have.length(0);
         done()
       });
-  });   
-    
+  });
+
   it.skip('Cannot validate after a timeout ');
   it.skip('Cannot validate if email has changed');
   it.skip('Clean old orphan validation  (for timeout > 100 days)');
-      
-});
 
+});
