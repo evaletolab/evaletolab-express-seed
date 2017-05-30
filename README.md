@@ -1,12 +1,15 @@
 # evaletolab-express-seed
 This is the seed of the Krabou CMS backend project. With this project we have a complet seed with those features:
 * continuous integration
-* sendmail with template 
-* multilingue CMS
-* basic CMS (for menu and documents)
-* sendmail for catched errors (in frontend to!!)
-* log activities 
-* complet user management (create, forget mail, update profile, admin, ...)
+* complet user management (create, update, forget password, profile, roles, ...)
+* mailchimp list subscription (on create user)
+* basic CMS :fire:
+  * multilingue :love:
+  * handle custom menu,
+  * handle page type (use default css by type),
+  * handle title, tagline, about,
+* sendmail when catched errors (vs getsentry.com)
+* log activities (optional)
 
 MISSING
 * replacing cookies by JWT token
